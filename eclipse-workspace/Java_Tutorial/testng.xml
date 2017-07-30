@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1">
+  <test name="test1">
+    <classes>
+       <class name="javapractice.FirstTest"/>
+    </classes>
+  </test>
+  <test name="SecondTest" >
+<classes>
+<class name="test.firstpackage.SecondTestClass" />
+</classes>
+</test>
+</suite>
