@@ -9,17 +9,18 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
  
-public class AppiumTest {
+public class FacebookEmulatorTest {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
 		//Set the Desired Capabilities
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("deviceName", "Viki");
-		caps.setCapability("udid", "32040ee4cf5d31a3"); //Give Device ID of your mobile phone
+		caps.setCapability("deviceName", "device");
+		caps.setCapability("udid", "emulator-5554"); //Give Device ID of your mobile phone
 		caps.setCapability("platformName", "Android");
-		caps.setCapability("platformVersion", "5.1.1");
+		caps.setCapability("platformVersion", "8.0.0");
 		caps.setCapability("appPackage", "com.facebook.katana");
+		caps.setCapability("'appWaitActivity", "com.facebook.katana.LoginActivity");
 		caps.setCapability("appActivity", "com.facebook.katana.LoginActivity");
 		//caps.setCapability("'appWaitActivity", "com.facebook.katana.LoginActivity");
 		
@@ -33,7 +34,7 @@ public class AppiumTest {
 				driver.findElement(By.id("com.facebook.katana:id/login_username")).sendKeys("blueonelove82@gmail.com");
 				Thread.sleep(5000);
 				driver.findElement(By.id("com.facebook.katana:id/login_password")).click();
-				driver.findElement(By.id("com.facebook.katana:id/login_password")).sendKeys("xxxxxx");
+				driver.findElement(By.id("com.facebook.katana:id/login_password")).sendKeys("xxxx$xxxx");
 				Thread.sleep(5000);
 				driver.findElement(By.id("com.facebook.katana:id/login_login")).click();
 			
